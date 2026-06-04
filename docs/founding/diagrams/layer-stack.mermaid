@@ -1,0 +1,16 @@
+%% diagrams/layer-stack.mermaid — the compositing order, back (bottom) to front (top)
+flowchart BT
+  H0[Back hair] --> B[Base · the person]
+  B --> G1[Garment · tee]
+  G1 --> G2[Garment · shirt]
+  G2 --> G3[Garment · jacket]
+  G3 --> H1[Front hair]
+  H1 --> F[Face · makeup look]
+  classDef base fill:#181318,color:#f7f4f2,stroke:#181318;
+  classDef hair fill:#fbe8f0,color:#181318,stroke:#b0306a,stroke-width:1px;
+  classDef garment fill:#ffffff,color:#181318,stroke:#b0306a,stroke-width:1px;
+  classDef face fill:#fbf2dc,color:#181318,stroke:#b8860b,stroke-width:1px;
+  class B base;
+  class H0,H1 hair;
+  class G1,G2,G3 garment;
+  class F face;
